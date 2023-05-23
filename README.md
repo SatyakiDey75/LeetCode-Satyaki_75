@@ -27,13 +27,13 @@
 ### Installation ->
 1. Ensure you have ``` Java Development Kit (JDK)``` installed on your system.
 2. Clone the repo ```git clone https://github.com/SatyakiDey75/LeetCode-Satyaki_75.git``` or download the repository.
+3. Go to the cloned/downloaded directory, and navigate to your desired program -> ``` cd "folder_name" ```, and then to the code file.
+4. And now you can run the example scripts or create your own scripts.  
 
 
 ### Usage ->
 
-- Navigate to the cloned/downloaded directory using the command line: ```cd repository_folder```.
-- Locate your desired Java program within the repository folder.
-- Compile the Java file by running: ```javac filename.java```. Replace ```filename``` with the actual name of your Java file.
+- Compile any Java program file by running: ```javac filename.java```. Replace ```filename``` with the actual name of the Java file.
 - Once the compilation is successful, you can execute the program by typing: ```java filename```. Again, replace ```filename``` with the name of your Java file (excluding the ```.java``` extension).
 
 ## 3. How to install and run Python ?
