@@ -4,7 +4,9 @@
 
  </div>  
  
-## Solutions of the Leetcode problems I have solved ->
+## This repository contains the Solutions of all the Leetcode problems I have solved :)
+### Visit my Leetcode profile [here](https://leetcode.com/Satyaki_75/).
+&nbsp;
   
 ## 1. How to install and run C/C++ ?
 
