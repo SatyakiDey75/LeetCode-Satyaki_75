@@ -1,6 +1,7 @@
 class Solution:
     def countAsterisks(self, s: str) -> int:
         c1,c=0,0
+        
         for i in s:
             if i=='|':
                 c1+=1
