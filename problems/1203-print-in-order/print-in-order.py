@@ -1,20 +1,18 @@
 class Foo:
-    f,s=False,False
+    f=False
+    s=False
     def __init__(self):
         pass
 
-
-    def first(self, printFirst: 'Callable[[], None]') -> None:
+    def first(self, printFirst):
         printFirst()
         self.f=True
 
-
-    def second(self, printSecond: 'Callable[[], None]') -> None:
+    def second(self, printSecond):
         while not self.f: continue
         printSecond()
         self.s=True
 
-
-    def third(self, printThird: 'Callable[[], None]') -> None:
+    def third(self, printThird):
         while not self.s: continue
         printThird()
