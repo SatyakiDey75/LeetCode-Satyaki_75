@@ -5,7 +5,7 @@ class Solution {
             int s=0;
             for (int j=0;j<a[i].length;j++)
                 s+=a[i][j];
-            if (s>w)    w=s;
+           w=Math.max(s,w);
         }
         return w;
     }
