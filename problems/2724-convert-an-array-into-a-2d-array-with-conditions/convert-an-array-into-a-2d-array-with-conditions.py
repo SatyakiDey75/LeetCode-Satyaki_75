@@ -1,10 +1,8 @@
 def mat(nums):
         l,l1=[],[]
         for i in nums:
-            if i not in l:
-                l.append(i)
-            else:
-                l1.append(i)
+            if i not in l: l.append(i)
+            else: l1.append(i)
         return l,l1
 
 class Solution(object):
