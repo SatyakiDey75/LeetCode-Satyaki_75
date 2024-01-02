@@ -2,7 +2,6 @@ def let(i):
     s='Z'
     if i%26>0:
         s=chr(64+(i%26))
-        c=i//26
     return s
 
 class Solution(object):
@@ -12,5 +11,4 @@ class Solution(object):
             s+=let(c)
             if c%26==0: c=(c//26)-1
             else: c//=26
-            print(c,s)
         return s[::-1]
