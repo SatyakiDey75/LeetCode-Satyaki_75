@@ -10,10 +10,6 @@ def mat(nums):
 class Solution(object):
     
     def findMatrix(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
         l=[]
         c=mat(nums)
         l.append(c[0])
