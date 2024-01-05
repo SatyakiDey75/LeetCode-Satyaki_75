@@ -1,5 +1,5 @@
 class Codec:
-
+    
     char=string.ascii_letters+"0123456789"
     ctu={}
     utc={}
@@ -10,6 +10,7 @@ class Codec:
                 self.ctu[c]=lu
                 self.utc[lu]=c
         return "http://tinyurl.com/"+self.utc[lu]
+
 
     def decode(self, su):
         return self.ctu[su[-6:]]
