@@ -5,17 +5,10 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        min,max=list(set(nums1)),list(set(nums2))
-        # if len(nums1)>len(nums2):
-        #     min,max=list(set(nums2)),list(set(nums1))
-        s,r=0,0
-        # for i in min:
-        #     if i in max:
-        #         s+=nums1.count(i)
-        #         r+=nums2.count(i)
-        # return [s,r]
+        min,max=(list(set(nums1)),list(set(nums2))) if len(nums1)<len(nums2) else (list(set(nums2)),list(set(nums1)))
+        l=[0]*2
         for i in min:
             if i in max:
-                s+=nums1.count(i)
-                r+=nums2.count(i)
-        return [s,r]
+                l[0]+=nums1.count(i)
+                l[1]+=nums2.count(i)
+        return l
