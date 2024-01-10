@@ -1,10 +1,5 @@
 class Solution(object):
     def decrypt(self, code, k):
-        """
-        :type code: List[int]
-        :type k: int
-        :rtype: List[int]
-        """
         c=[0]*len(code)
         if k==0:
             return c
