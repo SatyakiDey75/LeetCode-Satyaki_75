@@ -1,10 +1,9 @@
 class Solution(object):
     def sortArrayByParity(self, nums):
-        n1,i=[],0
-        while i<len(nums):
-            if nums[i]%2!=0:
-                n1.append(nums[i])
-                nums.remove(nums[i])
-                i-=1
-            i+=1
-        return nums+n1
+        n1,n2=[],[]
+        for i in nums:
+            if i%2==0:
+                n1.append(i)
+                continue
+            n2.append(i)
+        return n1+n2
