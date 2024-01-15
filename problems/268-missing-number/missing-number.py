@@ -1,5 +1,5 @@
 class Solution(object):
     def missingNumber(self, nums):
-        l=[i for i in range(0,len(nums)+1)]
-        return [i for i in l if i not in nums][0]
-        
+        n=len(nums)
+        max_sum=(n*(n+1))/2
+        return max_sum-sum(nums)
