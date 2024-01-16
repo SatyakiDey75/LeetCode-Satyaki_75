@@ -1,5 +1,11 @@
 class Solution(object):
     def detectCapitalUse(self, w):
-        return w.isupper() or w.islower() or w==w.capitalize()
+        if w.isupper():
+            return True
+        elif w.islower():
+            return True
+        elif w[0].isupper() and w[1:].islower():
+            return True
+        return False
 
         
