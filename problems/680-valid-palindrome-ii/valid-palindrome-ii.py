@@ -1,10 +1,10 @@
 class Solution(object):
     def validPalindrome(self, s):
-        def vp2(a,b):
-            return all(s[i]==s[b-i+a] for i in range(a,b))
-        n=len(s)
-        for i in range(n//2):
-            if s[i]!=s[~i]:
-                return vp2(i+1,n-1-i) or vp2(i,n-2-i)
-        return True
+        if s==s[::-1]:
+            return True
+        for i in range(len(s)):
+            if s[i]!=s[len(s)-1-i]:
+                t=s[:i]+s[i+1:]
+                t2=s[:len(s)-1-i]+s[len(s)-i:]
+                return t==t[::-1] or t2==t2[::-1]
         
