@@ -1,5 +1,10 @@
 class Solution(object):
     def maxFrequencyElements(self, nums):
+        # Easy solution:
+        # l=[nums.count(i) for i in nums]
+        # return l.count(max(l))
+
+        # Alternate solution (~92% beats)
         d={}
         for i in nums:
             if d.get(i):
