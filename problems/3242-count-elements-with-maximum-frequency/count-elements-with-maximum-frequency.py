@@ -6,7 +6,8 @@ class Solution(object):
                 d[i]+=1
             else:
                 d[i]=1
-        max,co=0,0
+        max=0
+        co=0
         for i,j in d.items():
             if max<j:
                 max=j
