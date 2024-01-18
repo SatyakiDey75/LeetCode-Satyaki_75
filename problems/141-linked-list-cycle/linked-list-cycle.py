@@ -5,11 +5,12 @@
 #         self.next = None
 
 class Solution(object):
-    def hasCycle(self, head):
-        r=[]
-        q=head
-        while q not in r and q!=None:
-            r.append(q)
-            q=q.next
-        return q!=None
+    def hasCycle(self,head):
+        i,j=head,head
+        while j and j.next:
+            i=i.next
+            j=j.next.next
+            if i==j:
+                return True
+        return False
         
