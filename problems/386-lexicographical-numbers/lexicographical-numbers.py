@@ -1,5 +1,5 @@
 class Solution(object):
     def lexicalOrder(self, n):
-        l=sorted([str(i) for i in range (1,n+1)])
-        l=[int(i) for i in l]
+        l=[i for i in range(1,n+1)]
+        l.sort(key=lambda x:str(x))
         return l
