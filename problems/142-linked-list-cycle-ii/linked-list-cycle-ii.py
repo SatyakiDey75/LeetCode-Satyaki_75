@@ -6,10 +6,14 @@
 
 class Solution(object):
     def detectCycle(self, head):
-        r=[]
+        r={}
+        c=0
         q=head
-        while q not in r and q!=None:
-            r.append(q)
+        while q:
+            if q in r:
+                return q
+            r[q]=c
+            c+=1
             q=q.next
-        return q
+        return None
         
