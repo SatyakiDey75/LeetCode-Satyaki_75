@@ -4,7 +4,7 @@ class Solution(object):
         for i in nums:
             if i==1:
                 c+=1
-                r=max(r,c)
             else:
+                r=max(r,c)
                 c=0
-        return r
+        return max(r,c)
