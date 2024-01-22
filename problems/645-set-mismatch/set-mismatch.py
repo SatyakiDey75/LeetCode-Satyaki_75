@@ -8,4 +8,4 @@ class Solution(object):
         for i, j in enumerate(nums):
             if j>0:
                 return [d,i+1]
-            
+        
