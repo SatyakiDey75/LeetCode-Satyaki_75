@@ -1,8 +1,8 @@
 class Solution(object):
     def shuffle(self, nums, n):
         r=[]
-        for i,j in zip(nums[:n],nums[n:]):
-            r.append(i)
-            r.append(j)
+        for i in range (n):
+            r.append(nums[i])
+            r.append(nums[i+n])
         return r
         
