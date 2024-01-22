@@ -1,5 +1,5 @@
-class Solution:
-    def reverseWords(self, s: str) -> str:
+class Solution(object):
+    def reverseWords(self, s):
         l=s.split(" ")
         s1=''
         for i in range(len(l)-1,0,-1):
