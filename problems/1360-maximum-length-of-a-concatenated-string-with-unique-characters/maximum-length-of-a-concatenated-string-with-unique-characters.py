@@ -6,7 +6,7 @@ class Solution:
             m=0
             for ch in i:
                 ch_i=ord(ch)-ord('a')
-                if m>>ch_i & 1:
+                if m>>ch_i&1:
                     m=0
                     break
                 m|=1<<ch_i
