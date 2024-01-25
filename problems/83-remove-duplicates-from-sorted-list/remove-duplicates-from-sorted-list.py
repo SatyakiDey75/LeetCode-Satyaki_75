@@ -8,6 +8,12 @@ class Solution(object):
         if not head:
             return None
         p=head
+        while p:
+            if p.next and p.val==p.next.val:
+                p.next=p.next.next
+            else:
+                p=p.next
+        return head
         # l=[]
         # while p:
         #     l.append(p.val)
@@ -21,9 +27,3 @@ class Solution(object):
         #     t=h2
         # t.next=None
         # return h1
-        while p:
-            if p.next and p.val==p.next.val:
-                p.next=p.next.next
-            else:
-                p=p.next
-        return head
