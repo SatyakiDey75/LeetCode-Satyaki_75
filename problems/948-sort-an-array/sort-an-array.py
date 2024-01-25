@@ -32,6 +32,6 @@ def mergeSort(arr,l,r):
 
 class Solution(object):
     def sortArray(self, nums):
-        mergeSort(nums,0,len(nums)-1)
-        # nums.sort()
+        # mergeSort(nums,0,len(nums)-1)
+        nums.sort()
         return nums
