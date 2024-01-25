@@ -1,5 +1,5 @@
-class Solution:
-    def compareVersion(self, v1: str, v2: str) -> int:
+class Solution(object):
+    def compareVersion(self, v1, v2):
         r1=v1.split('.')
         r2=v2.split('.')
         if len(r1)>len(r2):
