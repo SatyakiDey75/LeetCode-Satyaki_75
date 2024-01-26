@@ -1,5 +1,5 @@
-class Solution:
-    def isIsomorphic(self, s: str, t: str) -> bool:
+class Solution(object):
+    def isIsomorphic(self, s, t):
         if len(s)!=len(t):
             return False
         d={}
@@ -9,6 +9,4 @@ class Solution:
             if d[x]!=y:
                 return False
         return len(set(d))==len(set(d.values()))
-        
-        # return [*map(s.index, s)] == [*map(t.index, t)]
         
