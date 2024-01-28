@@ -1,9 +1,12 @@
 class Solution(object):
     def findMaxK(self, nums):
         nums.sort()
-        i=0
-        while i<len(nums) and nums[i]<0:
-            if -nums[i] in nums:
-                return -nums[i]
-            i+=1
+        l,r=0,len(nums)-1
+        while l<r:
+            if -nums[l]==nums[r]:
+                return nums[r]
+            elif -nums[l]>nums[r]:
+                l+=1
+            else:
+                r-=1
         return -1
