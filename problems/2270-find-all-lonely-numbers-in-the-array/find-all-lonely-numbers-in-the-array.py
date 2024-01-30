@@ -1,9 +1,13 @@
 class Solution(object):
     def findLonely(self, nums):
+        d={}
+        for i in nums:
+            if i not in d:
+                d[i]=1
+            else:
+                d[i]+=1
         l=[]
-        d=Counter(nums)
-        for i,j in d.items():
-            if(d[i-1]==0 and d[i+1]==0 and j==1):
+        for i in nums:
+            if d[i]==1 and i-1 not in d and i+1 not in d:
                 l.append(i)
         return l
-        
