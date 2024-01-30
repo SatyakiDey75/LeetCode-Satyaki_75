@@ -11,3 +11,4 @@ class Solution(object):
             if d[i]==1 and i-1 not in d and i+1 not in d:
                 l.append(i)
         return l
+        
