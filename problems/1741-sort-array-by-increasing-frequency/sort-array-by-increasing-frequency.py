@@ -1,5 +1,10 @@
 class Solution(object):
     def frequencySort(self, nums):
-        cnt=Counter(nums)
-        return sorted(nums,key=lambda x:(cnt[x],-x))
+        d={}
+        for i in nums:
+            if i not in d:
+                d[i]=1
+            else:
+                d[i]+=1
+        return sorted(nums,key=lambda x:(d[x],-x))
         
