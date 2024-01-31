@@ -6,11 +6,11 @@ class Solution(object):
                 if j.isdigit():
                     return False
                 if j=='-':
+                    if ch==1:
+                        return False
                     if s==0 or not i[s-1].isalpha():
                         return False
                     if s==len(i)-1 or not i[s+1].isalpha():
-                        return False
-                    if ch==1:
                         return False
                     ch+=1
                 if j in ['!','.',',']:
