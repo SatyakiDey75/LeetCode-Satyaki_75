@@ -3,6 +3,5 @@ class Solution:
         s=sorted(Counter(words).items(),key=lambda x:(-x[1],x[0]))
         res=s[0:k]
         t=dict(res)
-        
         return ([x for x in (t.keys())])
         
