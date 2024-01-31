@@ -1,7 +1,8 @@
 class Solution(object):
     def superPow(self, a, b):
-        s=0
-        for i in b:
-            s=s*10+i
-        return pow(a,s,1337)
+        s=1
+        for i in b[::-1]:
+            s=(s*pow(a,i,1337))%1337
+            a=pow(a,10,1337)
+        return s
         
