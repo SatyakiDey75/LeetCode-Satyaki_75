@@ -11,3 +11,4 @@ class Solution(object):
         for i in rl:
             res+=(i[0]*i[1])
         return res
+        
