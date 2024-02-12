@@ -1,10 +1,7 @@
 class Solution(object):
     def majorityElement(self, nums):
-        b=None
-        c=0
-        for i in nums:
-            if c==0:
-                b=i
-            c+=(1 if i==b else -1)
-        return b 
+        n=len(nums)
+        for i in set(nums):
+            if nums.count(i)>n/2:
+                return i
         
