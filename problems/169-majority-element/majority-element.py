@@ -1,7 +1,6 @@
 class Solution(object):
     def majorityElement(self, nums):
-        n=len(nums)
-        for i in set(nums):
-            if nums.count(i)>n/2:
-                return i
+        nums.sort()
+        n = len(nums)
+        return nums[n//2]
         
