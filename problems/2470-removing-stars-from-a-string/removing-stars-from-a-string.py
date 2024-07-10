@@ -1,9 +1,9 @@
-class Solution(object):
-    def removeStars(self, s):
-        l=[]
+class Solution:
+    def removeStars(self, s: str) -> str:
+        ans = ''
         for i in s:
-            if i=='*':
-                l.pop()
+            if i != "*":
+                ans += i
             else:
-                l.append(i)
-        return "".join(l)
+                ans = ans[:-1]
+        return ans
