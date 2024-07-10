@@ -1,16 +1,9 @@
 class Solution:
     def minOperations(self, logs: List[str]) -> int:
-        l=[]
+        c=0
         for i in logs:
             if i!="../" and i!="./":
-                l.append(i)
+                c+=1
             elif i=="../":
-                l=l[:-1]
-        return len(l)
-        # count_1 = logs.count("../")
-        # count_2 = logs.count("./")
-        # count_3 = len(logs) - count_1 - count_2
-
-        # if count_3 > count_1:
-        #     return count_3 - count_1
-        # return 0
+                c-=1 if c>0 else 0
+        return c
