@@ -9,6 +9,7 @@ class Solution:
                     s=stk.pop()
                 if stk and stk[-1]==abs(i):
                     stk.pop()
-                elif (not stk) or stk[-1]<abs(i):
+                    continue
+                if (not stk) or stk[-1]<abs(i):
                     stk.append(i)
         return stk
