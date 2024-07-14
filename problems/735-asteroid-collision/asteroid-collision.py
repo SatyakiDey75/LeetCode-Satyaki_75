@@ -1,8 +1,3 @@
-# def func(stk):
-    
-#     return stk
-        
-
 class Solution:
     def asteroidCollision(self, ast: List[int]) -> List[int]:
         stk = []
@@ -26,5 +21,4 @@ class Solution:
                             stk.append(i)
                 else:
                     stk.append(i)
-            # print(stk)
         return stk
