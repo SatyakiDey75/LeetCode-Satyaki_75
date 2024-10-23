@@ -3,29 +3,25 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-
-def rotate(l,d):
-    l1=[]
-    for i in range (len(l)-d,len(l)):
-        l1.append(l[i])
-    for i in range (0,len(l)-d):
-        l1.append(l[i])
-    return l1
-
 class Solution(object):
     def rotateRight(self, head, k):
-        if head==None:
-            return None
-        r=[]
-        p,q=head,head
-        while p!=None:
-            r.append(p.val)
-            p=p.next
-        r1=rotate(r,k%len(r))
+        l=[head]
+        temp=head
         i=0
-        while q!=None and i<len(r1):
-           q.val=r1[i]
-           i+=1
-           q=q.next
+        if k==0 or not temp: return head
+        while temp.next:
+            l.append(temp.next)
+            i+=1
+            temp=temp.next
+        k=k%(i+1)
+        head1=None
+        i=len(l)-1
+        for j in range (k):
+            head1=ListNode(l[i].val)
+            l[i-1].next=None
+            head1.next=head
+            head=head1
+            i-=1
+            if i<0:
+                i=len(l)-1
         return head
-        
