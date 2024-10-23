@@ -19,13 +19,11 @@ class Solution(object):
         l=list(str(s*2))
         while head2.next:
             head2.val=int(l[i])
-            print("Bye",l[i])
             i+=1
             head2=head2.next
         head2.val=int(l[i])
         i+=1
         while i<len(l):
-            print("Hello",l[i])
             head2.next=ListNode(int(l[i]))
             head2=head2.next
             i+=1
