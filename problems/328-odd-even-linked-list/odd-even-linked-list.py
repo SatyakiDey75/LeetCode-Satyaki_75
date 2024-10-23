@@ -5,13 +5,25 @@
 #         self.next = next
 class Solution(object):
     def oddEvenList(self, head):
-        r,q,p,i=[],head,head,0
-        while p:
-            r.append(p.val)
-            p=p.next
-        r=r[::2]+r[1::2]
-        while i<len(r):
-            q.val=r[i]
-            q=q.next
-            i+=1
-        return head
+        """
+        :type head: Optional[ListNode]
+        :rtype: Optional[ListNode]
+        """
+        if not head: return head
+        l=[head]
+        temp=head
+        while temp.next:
+            l.append(temp.next)
+            temp=temp.next
+        new1=ListNode(l[0].val)
+        curr=new1
+        for i in range (2,len(l),2):
+            curr.next=ListNode(l[i].val)
+            curr=curr.next
+        for i in range (1,len(l),2):    
+            curr.next=ListNode(l[i].val)
+            curr=curr.next
+        return new1
+
+
+        
