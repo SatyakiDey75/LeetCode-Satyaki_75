@@ -8,6 +8,5 @@ class Solution:
                 l2.append(i)
             if i == '..' and len(l2) > 0:
                 l2.pop()
-        s = "/"
-        s += '/'.join(map(str, l2))
+        s = "/" + '/'.join(l2)
         return s
