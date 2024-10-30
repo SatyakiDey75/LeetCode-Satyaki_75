@@ -4,6 +4,8 @@ def to_minutes(time):
 
 class Solution:
     def findMinDifference(self, tp: List[str]) -> int:
+        if len(tp) > 1440:
+            return 0
         minutes = [to_minutes(time) for time in tp]
         minutes.sort()
         min_diff = 10**20
