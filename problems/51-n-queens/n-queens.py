@@ -33,7 +33,7 @@ class Solution:
         cols = set()
         pos = set()
         neg = set()
-        def solveRow(queens: List[str], row: int):
+        def solveRow(queens, row):
             if row == n:
                 res.append(queens.copy())
             for col in range(n):
