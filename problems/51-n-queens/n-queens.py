@@ -23,7 +23,33 @@ def isSafe(board, row, col, N):
 
 class Solution:
     def solveNQueens(self, n: int) -> List[List[str]]:
-        board = [[0 for x in range(n)] for y in range(n)]
-        solutions = []
-        solveNQueens(board, 0, n, solutions)
-        return solutions
+        # board = [[0 for x in range(n)] for y in range(n)]
+        # solutions = []
+        # solveNQueens(board, 0, n, solutions)
+        # return solutions
+
+        # for beats :)
+        res = []
+        cols = set()
+        pos = set()
+        neg = set()
+        def solveRow(queens: List[str], row: int):
+            if row == n:
+                res.append(queens.copy())
+            for col in range(n):
+                if col in cols or row + col in pos or row - col in neg:
+                    continue
+                cols.add(col)
+                pos.add(row + col)
+                neg.add(row - col)
+
+                curr = ["."] * n
+                curr[col] = "Q"
+                queens[row] = "".join(curr)
+                solveRow(queens, row+1)
+
+                cols.remove(col)
+                pos.remove(row + col)
+                neg.remove(row - col)
+        solveRow([""]*n, 0)
+        return res
